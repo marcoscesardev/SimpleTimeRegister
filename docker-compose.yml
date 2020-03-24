@@ -1,0 +1,27 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    volumes:
+      - ./tmp/data/mysql:/mysql
+      - ./tmp/data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: octopus_app_db
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+
+  web:
+    container_name: str-backend
+    build: .
+    tty: true
+    volumes:
+      - .:/str
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
