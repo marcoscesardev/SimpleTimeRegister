@@ -1,26 +1,22 @@
 version: '2'
+
 services:
   db:
-    image: mysql:5.7
-    container_name: mysql
-    restart: always
-    volumes:
-      - ./tmp/data/mysql:/mysql
-      - ./tmp/data/mysql:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: octopus_app_db
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_PASSWORD: password
+    image: mariadb
+    container_name: str-db
     ports:
-      - "3307:3306"
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: str
+      MYSQL_ROOT_PASSWORD: secret
 
   web:
     container_name: str-backend
     build: .
     tty: true
+    working_dir: /usr/src/app
     volumes:
-      - .:/str
+      - .:/usr/src/app
     ports:
       - "3000:3000"
     depends_on:
