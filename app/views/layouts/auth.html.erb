@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <%= render 'layouts/head' %>
+
+  <div class="main-content mt-5">
+    <div class="page-content">
+      <div class="justify-content-center bd-highlight mb-3 d-flex ">
+        <div class="p-2 center-v">
+          <%= render 'layouts/flash' %>
+          
+          <div class="card">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>
