@@ -1,0 +1,11 @@
+<div class="page__heading">
+  <h1><%= t 'actions.edit' %> <span class="text-muted"><%= object_title %></span></h1>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <%= simple_form_for(resource, local: true) do |f| %>
+      <%= render 'form_wrapper', f: f %>
+    <% end %>
+  </div>
+</div>

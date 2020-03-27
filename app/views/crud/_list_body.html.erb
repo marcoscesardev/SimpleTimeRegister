@@ -1,0 +1,12 @@
+<% collection.each do |object| %>
+  <tr>
+    <% list_attributes(resource_class).each do |attribute| %>
+      <td>
+        <% attribute = formatted_attribute(object, attribute) %>
+        <%= value_by_field_type(attribute) %>
+      </td>
+    <% end %>
+
+    <td><%= render 'list_icons', object: object %></td>
+  </tr>
+<% end %>

@@ -8,6 +8,10 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Backend
 gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
+gem 'inherited_resources'
+
+# form
+gem 'simple_form'
 
 # Front
 gem 'sass-rails', '>= 6'

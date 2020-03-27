@@ -1,0 +1,5 @@
+<% list_attributes_show.each do |attribute, value| %>
+  <b><%= localized_attribute(resource.class, attribute) %>:</b>
+  <%= value_by_field_type(formatted_attribute(resource, attribute)) %>
+  <br>
+<% end %>

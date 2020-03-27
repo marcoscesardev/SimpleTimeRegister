@@ -1,0 +1,6 @@
+<tr>
+  <% list_attributes(resource_class).each do |attribute| %>
+    <th><%= localized_attribute(resource_class, attribute) %></th>
+  <% end %>
+  <th></th>
+</tr>
