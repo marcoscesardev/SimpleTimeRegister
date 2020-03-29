@@ -7,34 +7,25 @@
 
     <!-- Navbar Brand -->
     <a href="<%= root_path %>" class="navbar-brand">
-      <span class="navbar-brand-icon">
-       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26">
-        <g fill="none" fill-rule="evenodd" transform="translate(-4 -3)">
-          <polygon points="0 0 33 0 33 33 0 33"/>
-          <path fill="#4A90E2" d="M16.4861111,25.550603 L6.25,17.7383325 L4,19.4562139 L16.5,29 L29,19.4562139 L26.7361111,17.7246985 L16.4861111,25.550603 L16.4861111,25.550603 Z M16.5,22.0875721 L26.7222222,14.2753015 L29,12.5437861 L16.5,3 L4,12.5437861 L6.26388889,14.2753015 L16.5,22.0875721 L16.5,22.0875721 Z"/>
-        </g>
-      </svg>
-      <span>Stack Rails Base</span>
+      <span class="navbar-brand-icon" style="width: 40px">
+        <i class="material-icons icon-40pt">access_time</i>
+      </span>
+      <p title="<%= I18n.t('system.description') %>" href="/">
+        <%= I18n.t('system.shot_name') %> - 
+        <span class="text-primary"><%= I18n.t('system.full_name') %></span>
+      </p>
     </a>
     
     <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
       <li class="nav-item dropdown">
         <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">
           <span class="ml-1 d-flex-inline">
-            <span class="text-light">Adrian D.</span>
+            <span class="text-light"><%= current_employee.name %></span>
           </span>
         </a>
         <div id="account_menu" class="dropdown-menu dropdown-menu-right">
-          <div class="dropdown-item-text dropdown-item-text--lh">
-            <div><strong>Adrian Demian</strong></div>
-            <div>@adriandemian</div>
-          </div>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="<%= root_path %>">Dashboard</a>
-          <a class="dropdown-item" href="#" onClick="alert('Available in PRO version!')"> My profile</a>
-          <a class="dropdown-item" href="#"  onClick="alert('Available in PRO version!')" >Edit account</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"  onClick="alert('Available in PRO version!')" >Logout</a>
+          <%= link_to raw("<i class='fa fa-sign-out'></i> " << I18n.t('buttons.logout')), 
+            destroy_employee_session_path, class: 'dropdown-item', id: 'sign-out', method: :delete %>
         </div>
       </li>
     </ul>

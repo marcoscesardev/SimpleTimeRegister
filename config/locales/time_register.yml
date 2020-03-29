@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      time_register:
+        one: Registro
+        other: Registros
+
+    attributes:
+      time_register:
+        employee: Funcionário
+        employee_id: Funcionário
+        justification: Justificativa
+        registered_at: Registrado em
+        created_at: Criado em
+        updated_at: Atualizado em
+        registered_by: Registrado por

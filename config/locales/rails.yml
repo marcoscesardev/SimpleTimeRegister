@@ -217,7 +217,11 @@ pt-BR:
   time:
     am: ''
     formats:
+      date_and_hour: "%d/%m/%Y %H:%M:%S"
       default: "%a, %d de %B de %Y, %H:%M:%S %z"
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
     pm: ''
+
+  'true': 'Sim'
+  'false': 'Não'

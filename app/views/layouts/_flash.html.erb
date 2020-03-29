@@ -1,0 +1,12 @@
+<% flash_message(notice).map do |notice| %>
+  <div class="alert alert-dismissible bg-success text-white border-0 fade show" role="alert">
+    <b><%= notice %></b>
+  </div>
+<% end %>
+
+
+<% flash_message(alert).map do |alert| %>
+  <div class="alert alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+    <b><%= alert %></b>
+  </div>
+<% end %>

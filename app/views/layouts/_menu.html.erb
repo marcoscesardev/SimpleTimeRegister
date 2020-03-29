@@ -1,0 +1,6 @@
+<li class="sidebar-menu-item <%= controller == controller_name ? "active" : "" %>">
+  <a class="sidebar-menu-button" href="<%= send("#{controller}_path") %>">
+    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons"><%= icon %></i>
+    <span class="sidebar-menu-text"><%= object_title(model, true) %></span>
+  </a>
+</li>
