@@ -1,0 +1,21 @@
+pt-BR:
+  activerecord:
+    models:
+      employee:
+        one: Funcionário
+        other: Funcionários
+
+    attributes:
+      employee:
+        address: Endereço
+        born_day: Nascimento
+        cpf: CPF
+        created_at: Criado em
+        email: Email
+        is_admin: Administrador?
+        is_active: Ativo?
+        name: Nome
+        password: "Senha"
+        password_confirmation: "Confimação da Senha"
+        phone: Telefone
+        updated_at: Atualizado em
