@@ -1,0 +1,36 @@
+<div class="page__heading">
+  Home
+</div>
+
+<div class="card">
+  <div class="card-body text-center">
+    <%= link_to( 
+      raw("<i class='material-icons icon-150pt'>alarm_add</i><h1>Registrar Ponto</h1>"),
+      home_time_register_path 
+    ) %>
+    
+    <hr>
+  </div>
+</div>
+
+<div class="row card-group-row">
+  <div class="col-lg-6 card-group-row__col">
+    <div class="card card-group-row__card card-body card-body-x-lg flex-row align-items-center">
+      <div class="flex">
+        <div class="card-header__title text-muted mb-2"><%= object_title(Employee, true) %></div>
+        <div class="text-amount"><%= Employee.active.size %></div>
+      </div>
+      <div><i class="material-icons icon-muted icon-40pt ml-3">group</i></div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 card-group-row__col">
+    <div class="card card-group-row__card card-body card-body-x-lg flex-row align-items-center">
+      <div class="flex">
+        <div class="card-header__title text-muted mb-2"><%= object_title(TimeRegister, true) %></div>
+        <div class="text-amount"><%= TimeRegister.all.size %></div>
+      </div>
+      <div><i class="material-icons icon-muted icon-40pt ml-3">access_time</i></div>
+    </div>
+  </div>
+</div>
