@@ -1,0 +1,26 @@
+
+<% collection.group_by do |employee|
+  [employee.employee_id, employee.registered_at.to_date]
+end.values.each do |employees| %>
+  <% employees.sort_by(&:id).each_with_index do |employee, index| %>
+
+    <tr>
+      <% list_attributes(resource_class).each do |attribute| %>
+        <td>
+          <% if attribute ==  "registered_at" %>
+            <% if index.even? %>
+              <i class="material-icons icon-30pt text-success">arrow_downward</i>
+            <% else %>
+              <i class="material-icons icon-30pt text-danger">arrow_upward</i>
+            <% end %>
+          <% end %>
+
+          <% attribute = formatted_attribute(employee, attribute) %>
+          <%= value_by_field_type(attribute) %>
+        </td>
+      <% end %>
+
+      <td><%= render 'list_icons', object: employee %></td>
+    </tr>
+  <% end %>
+<% end %>
