@@ -24,6 +24,8 @@ module ApplicationHelper
   end
 
   def menu(model, icon)
-    render 'layouts/menu', { model: model, controller: model.to_s.downcase.pluralize, icon: icon }
+    if can? :read, model
+      render 'layouts/menu', { model: model, controller: model.to_s.underscore.pluralize, icon: icon }
+    end
   end
 end

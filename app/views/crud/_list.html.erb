@@ -1,13 +1,13 @@
 <div class="card">
   <div class="card-body">
     <%= table_list do %>
-      <table class="table table-striped table-bordered table-hover">
+      <table id="responsive-table" class="database-js table table-striped table-bordered table-hover">
         <thead>
-          <%= render 'list_header' %>
+          <%= render 'list_header', resource_class: resource_class %>
         </thead>
 
         <tbody>
-          <%= render 'list_body' %>
+          <%= render 'list_body', resource_class: resource_class, collection: collection %>
         </tbody>
       </table>
     <% end %>
