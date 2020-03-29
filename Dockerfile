@@ -1,15 +1,17 @@
 FROM ruby:2.6.2
+FROM alpine:edge
 
-MAINTAINER asitha@rahasak.com
+RUN apk update && apk upgrade && apk add ruby ruby-json ruby-io-console ruby-bundler ruby-irb \
+  ruby-bigdecimal tzdata postgresql-dev && apk add nodejs && apk add curl-dev ruby-dev build-base \
+  libffi-dev && apk add build-base libxslt-dev libxml2-dev ruby-rdoc mysql-dev sqlite-dev
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-&& apt-get install -y nodejs
+RUN mkdir /app
+WORKDIR /app
 
-RUN apt-get update && apt-get install -y build-essential curl apt-transport-https wget && \
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-    apt-get update && apt-get install -y yarn postgresql-client
+COPY Gemfile Gemfile.lock ./
+RUN gem install ovirt-engine-sdk -v '4.3.0' --source 'https://rubygems.org/'
+RUN bundle install
 
-WORKDIR /str
+COPY . .
 
-COPY . /str
+EXPOSE 3000

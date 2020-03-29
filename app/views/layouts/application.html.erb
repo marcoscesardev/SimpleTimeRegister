@@ -1,14 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <title>Stack Rails Base - Rails 5 Free Admin Theme</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  </head>
+<html dir="ltr">
+  <%= render 'layouts/head'%>
 
   <body class="<%= @body_class || 'layout-default' %>">
     <!-- Header Layout -->
@@ -27,8 +19,10 @@
 
         <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
           <div class="mdk-drawer-layout__content page">
-            <%# CONTENT  %>
-            <%= yield %>
+            <div class="container-fluid page__heading-container">
+              <%= render 'layouts/flash'%>
+              <%= yield %>
+            </div>
           </div>
           <!-- // END drawer-layout__content -->
 
@@ -45,7 +39,7 @@
     <%= content_for :footer %>
 
     <%= javascript_include_tag 'core-scripts', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
 
     <%= content_for :footer_scripts %>
   </body>
