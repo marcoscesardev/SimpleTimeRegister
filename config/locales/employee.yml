@@ -19,3 +19,8 @@ pt-BR:
         password_confirmation: "Confimação da Senha"
         phone: Telefone
         updated_at: Atualizado em
+
+  pages:
+    employee:
+      signin: 'Fazer Login'
+      signup: 'Cadastro'
