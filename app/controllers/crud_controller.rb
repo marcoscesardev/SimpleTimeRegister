@@ -1,11 +1,10 @@
 class CrudController < ApplicationController
   inherit_resources
 
+  load_and_authorize_resource
   helper_method :resource_name, :resource_class, :resource
 
   def index
-    build_resource
-
     respond_to do |format|
       format.html { render :index }
     end
@@ -48,9 +47,13 @@ class CrudController < ApplicationController
   def resource_name
     controller_name.singularize
   end
+  
+  def resource_params
+    object_params.fetch(resource_name, {})
+  end
 
-  def resource_class
-    resource_name.capitalize.constantize
+  def resource_class(resource = resource_name)
+    resource.camelize.constantize
   end
 
   def resource
