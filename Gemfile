@@ -9,7 +9,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
 gem 'inherited_resources'
-
+gem 'cancancan', '~> 3.1.0'
 # form
 gem 'simple_form'
 
@@ -20,6 +20,8 @@ gem 'turbolinks', '~> 5'
 gem 'rails-assets-bootstrap', ">= 4.0.0.alpha.2", source: "https://rails-assets.org"
 gem 'rails-assets-tether'
 gem 'sprockets-rails', '2.3.3'
+gem 'jquery-rails', '~> 4.3'
+gem 'jquery-datatables', '~> 1.10'
 
 # Authentication and security
 gem 'devise'

@@ -1,0 +1,18 @@
+pt-BR:
+  system:
+    description: Sistema para Controle de Ponto
+    full_name: SimpleTimeRegister
+    shot_name: STR
+
+  actions:
+    edit: Editar
+    new: Novo(a)
+
+  messages:
+    object_successfully_created: '%{object_name} criado(a) com sucesso.'
+    object_successfully_updated: '%{object_name} atualizado(a) com sucesso.'
+    unauthorized_page_acess: Você não está autorizado a acessar página.
+  
+  pages:
+    head:
+      title: "[STR] Controle de Ponto"

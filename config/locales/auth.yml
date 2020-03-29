@@ -11,5 +11,4 @@ pt-BR:
     messages:
       wellcome_message: Bem vindo ao STR
       without_sign_up: O SimpleTimeRegister(STR) é um sistema web para controle de ponto para 
-        funcionários, cadastre-se já, o seu CADASTRO só poderá ser ativado por um funcionario
-        administrador do sistema. tá bom?! :) 
+        funcionários, cadastre-se já! :) 
