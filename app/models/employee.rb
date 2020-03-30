@@ -3,6 +3,9 @@ class Employee < ApplicationRecord
 
   has_many :time_registers
 
+  validates :cpf, numericality: { only_integer: true}, length: { is: 11 }, uniqueness: true
+  validates :born_day, :name, :cpf, :address, :phone, :email, presence: true
+  
   scope :active, -> { where(is_active: true) }
 
   def to_s
