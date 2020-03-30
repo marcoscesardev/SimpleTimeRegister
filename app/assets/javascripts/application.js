@@ -1,4 +1,5 @@
-
+//= require jquery
+//= require jquery_ujs
 //= require datatables
 
 // Self Initialize DOM Factory Components
@@ -32,6 +33,3 @@ drawers.forEach((drawer) => {
     }
   })
 })
-
-// ENABLE TOOLTIPS
-$('[data-toggle="tooltip"]').tooltip()

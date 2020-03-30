@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   
   get 'home/time_register', action: :time_register, controller: :home
 
-  resources :employees
+  resources :employees, except: [:destroy]
   resources :home
-
   resources :time_registers
 end

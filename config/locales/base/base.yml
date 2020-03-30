@@ -10,6 +10,7 @@ pt-BR:
 
   messages:
     object_successfully_created: '%{object_name} criado(a) com sucesso.'
+    object_successfully_deleted: '%{object_name} deletado com sucesso.'
     object_successfully_updated: '%{object_name} atualizado(a) com sucesso.'
     unauthorized_page_acess: Você não está autorizado a acessar página.
   

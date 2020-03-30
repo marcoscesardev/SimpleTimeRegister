@@ -44,6 +44,23 @@ class CrudController < ApplicationController
     end
   end
 
+  def destroy
+    @object = resource_class.find(params[:id])
+
+    if @object.destroy
+      flash[:notice] = I18n.t(
+        'messages.object_successfully_deleted',
+        object_name: resource_class.model_name.human
+      )
+
+      render :index
+    else
+      flash[:alert] = @object.errors if @object.errors.present?
+
+      render :index
+    end
+  end
+
   def resource_name
     controller_name.singularize
   end

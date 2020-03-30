@@ -62,7 +62,6 @@ module CrudHelper
         "/#{object.id}"
       when :edit
         "/#{object.id}/edit"
-      else 
       end
   end
 
@@ -80,6 +79,17 @@ module CrudHelper
   def edit_link(object, options = []) 
     if can? :edit, object
       link_to(raw(options[:label]), smart_resource_path(object, :edit), class: options[:class])
+    end
+  end
+
+  def destroy_link(object, options = []) 
+    if can? :destroy, object
+      link_to(
+        raw(options[:label]),
+        resource_path(object),
+        class: options[:class],
+        method: :delete 
+      )
     end
   end
 

@@ -5,10 +5,6 @@ class TimeRegistersController < CrudController
     super.order(registered_at: :desc).includes(:employee)
   end
 
-  def collection_records
-    TimeRegister.all
-  end
-
   def load_collections
     @current_ability = Employee.last
     @employees = Employee.all
