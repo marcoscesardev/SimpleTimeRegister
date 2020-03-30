@@ -6,6 +6,7 @@ default: &default
   database: str
   username: root
   password: secret
+  socket: /var/run/mysqld/mysqlx.sock
 
 development:
   <<: *default

@@ -38,7 +38,7 @@ group :development do
   gem 'pry-rails', '~> 0.3'
 
   # Generate fake data to test
-  gem 'faker', '~> 1.9'
+  gem 'faker', '2.10.0'
 
   # Run development server
   gem 'spring'
