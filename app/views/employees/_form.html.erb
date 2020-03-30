@@ -1,7 +1,7 @@
 
 <%= f.input :is_admin %>
 <%= f.input :name %>
-<%= f.input :born_day %>
+<%= f.input :born_day, start_year: Date.today.year - 80, end_year: Date.today.year %>
 <%= f.input :cpf %>
 <%= f.input :address %>
 <%= f.input :phone %>
