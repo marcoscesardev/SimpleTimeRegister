@@ -24,15 +24,14 @@ employees =
 
 Employee.create!(employees)
 
-500.times.map do 
+280.times.each do |index|
   begin
     employee_id = (2..15).to_a.sample
 
     TimeRegister.create!(
-      registered_at: Faker::Time.between(from: 5.days.from_now, to: 10.minutes.from_now),
+      registered_at: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now),
       employee_id: employee_id,
-      registered_by_id: employee_id,
-      registered_at: Time.current
+      registered_by_id: employee_id
     )
   rescue
     next
