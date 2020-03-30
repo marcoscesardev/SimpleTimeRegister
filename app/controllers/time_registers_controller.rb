@@ -2,7 +2,7 @@ class TimeRegistersController < CrudController
   before_action :load_collections, only: [:new, :create, :edit, :update]
 
   def collection
-    super.order(registered_at: :desc).includes(:employee)
+    super.order(registered_at: :desc).includes(:employee, :registered_by)
   end
 
   def load_collections
