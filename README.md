@@ -1,24 +1,14 @@
 # SimpleTimeRegister
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este é um sistema para gerenciar o controle de ponto eletrônico para funcionários. O seu funcionamento é muito simples, o funcionário vai realizar o seu cadastro e logo na página inicial existe o botão "Registrar Ponto", quando for entrar ou sair, basta apertar este botão, o sistema verificará se o ponto registrado é ímpar ou par para aquele dia, se for ímpar será entrada, se for par é saída. 
 
-Things you may want to cover:
+Caso ocorra algum problema, basta contactar o administrador do sistema que poderá realizar os ajustes necessários.
 
-* Ruby version
+## Link ##
+- [Sistema Demonstrativo](http://34.68.167.237/)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Informações Técnicas ##
+- `ruby 2.6.2`
+- `rails ~> 6.0.2`
+- `mysql` (pode ser utilizado através do docker neste projeto)
+- Stack Rails Base - Template
