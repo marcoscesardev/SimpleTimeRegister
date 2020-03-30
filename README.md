@@ -12,3 +12,5 @@ Caso ocorra algum problema, basta contactar o administrador do sistema que poder
 - `rails ~> 6.0.2`
 - `mysql` (pode ser utilizado através do docker neste projeto)
 - Stack Rails Base - Template
+
+Os dados para testes estão criados por meio de seeds
