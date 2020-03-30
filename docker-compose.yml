@@ -2,13 +2,15 @@ version: '2'
 
 services:
   db:
-    image: mariadb
+    image: mysql:8.0.15
     container_name: str-db
     ports:
       - 3306:3306
     environment:
       MYSQL_DATABASE: str
       MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: secret
 
   web:
     container_name: str-backend
