@@ -33,7 +33,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development do
   # Debbug tools
-  gem 'better_errors', '~> 2.5'
+  gem 'better_errors', '~> 2.8'
   gem 'pry-byebug', '~> 3.7'
   gem 'pry-rails', '~> 0.3'
 
