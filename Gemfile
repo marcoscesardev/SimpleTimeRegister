@@ -7,7 +7,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 # Backend
 gem 'mysql2', '>= 0.4.4'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'inherited_resources'
 gem 'cancancan', '~> 3.1.0'
 # form
